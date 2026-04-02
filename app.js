@@ -1,7 +1,9 @@
 const express = require('express');
+const userRoutes = require('./rutas/rutas_de_usuario.js');
 const app = express();
 
 app.use(express.json());
+app.use('/users', userRoutes);
 
 app.get('/', (req, res) => {
   res.send('API funcionando');
